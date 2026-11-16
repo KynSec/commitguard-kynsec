@@ -3,7 +3,7 @@ requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "commit-guard"
+name = "commitguard-kynsec"
 dynamic = ["version"]
 description = "Fast, offline-first local security control plane for secrets, SAST, dependencies, and policy gating."
 readme = "README.md"
@@ -32,12 +32,12 @@ commit-guard-scan = "main:main"
 commit-guard-gui = "gui_server:main"
 
 [project.urls]
-Homepage = "https://github.com/CommitGuard-Sec/CommitGuard"
-Documentation = "https://github.com/CommitGuard-Sec/CommitGuard#readme"
-Repository = "https://github.com/CommitGuard-Sec/CommitGuard"
-Issues = "https://github.com/CommitGuard-Sec/CommitGuard/issues"
-Changelog = "https://github.com/CommitGuard-Sec/CommitGuard/blob/main/CHANGELOG.md"
-Security = "https://github.com/CommitGuard-Sec/CommitGuard/security/policy"
+Homepage = "https://github.com/KynSec/commitguard-kynsec"
+Documentation = "https://github.com/KynSec/commitguard-kynsec#readme"
+Repository = "https://github.com/KynSec/commitguard-kynsec"
+Issues = "https://github.com/KynSec/commitguard-kynsec/issues"
+Changelog = "https://github.com/KynSec/commitguard-kynsec/blob/main/CHANGELOG.md"
+Security = "https://github.com/KynSec/commitguard-kynsec/security/policy"
 
 [tool.setuptools]
 py-modules = ["main", "install_hook", "gui_server", "gui_actions", "gui_page"]

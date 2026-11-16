@@ -1,5 +1,13 @@
 # Changelog
 
+## 3.4.2 - 2026-11-16
+
+### Changed
+
+- Renamed the distribution and repository to `commitguard-kynsec` to match the
+  VS Code extension, and publish the wheel and sdist to PyPI with GitHub
+  Actions trusted publishing.
+
 ## 3.4.1 - 2026-11-10
 
 ### Fixed

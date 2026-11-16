@@ -1,7 +1,7 @@
 <#
 .SYNOPSIS
     CommitGuard — Universal Offline Installer for Windows PowerShell
-    Repository: https://github.com/CommitGuard-Sec/CommitGuard
+    Repository: https://github.com/KynSec/commitguard-kynsec
 #>
 
 [CmdletBinding()]
@@ -94,11 +94,11 @@ if ($sourceDir -and (Test-Path (Join-Path $sourceDir "install_hook.py"))) {
     $tempDir = Join-Path ([System.IO.Path]::GetTempPath()) ("commitguard-" + [System.Guid]::NewGuid().ToString().Substring(0,8))
     New-Item -ItemType Directory -Path $tempDir -Force | Out-Null
     $zipPath = Join-Path $tempDir "commitguard.zip"
-    $archiveUrl = "https://github.com/CommitGuard-Sec/CommitGuard/archive/refs/heads/main.zip"
+    $archiveUrl = "https://github.com/KynSec/commitguard-kynsec/archive/refs/heads/main.zip"
 
     Invoke-WebRequest -Uri $archiveUrl -OutFile $zipPath -UseBasicParsing
     Expand-Archive -Path $zipPath -DestinationPath $tempDir -Force
-    $sourceDir = Join-Path $tempDir "CommitGuard-main"
+    $sourceDir = Join-Path $tempDir "commitguard-kynsec-main"
 }
 
 # ------------------------------------------------------------------------------

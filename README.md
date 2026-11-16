@@ -7,12 +7,12 @@
 Secrets, risky code, dependencies, and imported analyzer findings. One policy,
 one baseline, one fast gate. No telemetry. No source upload. No waiting for CI.
 
-[![CI](https://github.com/KynSec/CommitGuard/actions/workflows/ci.yml/badge.svg)](https://github.com/KynSec/CommitGuard/actions/workflows/ci.yml)
+[![CI](https://github.com/KynSec/commitguard-kynsec/actions/workflows/ci.yml/badge.svg)](https://github.com/KynSec/commitguard-kynsec/actions/workflows/ci.yml)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
 [![Offline first](https://img.shields.io/badge/offline-first-2ea043)](#privacy-model)
 [![Zero telemetry](https://img.shields.io/badge/telemetry-zero-success)](#privacy-model)
-[![Release](https://img.shields.io/badge/release-3.4.1-blue)](#release-status)
+[![Release](https://img.shields.io/badge/release-3.4.2-blue)](#release-status)
 
 [Quickstart](#quickstart-in-60-seconds) · [Why CommitGuard](#why-commitguard) · [Features](#feature-matrix) · [CLI](#cli-at-a-glance) · [Architecture](#architecture) · [Docs](#documentation)
 
@@ -55,11 +55,14 @@ CommitGuard moves the control point to the developer's local loop.
 ## Quickstart in 60 Seconds
 
 ```bash
-# Install the signed 3.4.1 wheel from GitHub Releases.
-pipx install "https://github.com/KynSec/CommitGuard/releases/download/v3.4.1/commit_guard-3.4.1-py3-none-any.whl"
+# Install from PyPI.
+pipx install commitguard-kynsec
+
+# Or install the signed wheel from GitHub Releases:
+# pipx install "https://github.com/KynSec/commitguard-kynsec/releases/download/v3.4.2/commitguard_kynsec-3.4.2-py3-none-any.whl"
 
 # Or install from source:
-# pipx install "git+https://github.com/KynSec/CommitGuard.git"
+# pipx install "git+https://github.com/KynSec/commitguard-kynsec.git"
 
 # Initialize in any Git repository
 cd /path/to/your/repo
@@ -84,7 +87,7 @@ hook, and preserves your existing configuration and ignore files.
 
 ### Release status
 
-CommitGuard **3.4.1** is the current release. All four planned phases (0–4) are
+CommitGuard **3.4.2** is the current release. All four planned phases (0–4) are
 implemented. GitHub Releases provide signed wheels, sdists, a single-file
 zipapp, the VS Code extension, SBOMs, build provenance, and container images.
 The remaining Phase 4 organizational evidence is tracked in
@@ -105,14 +108,14 @@ The remaining Phase 4 organizational evidence is tracked in
 
 | Method | Command | Best for |
 |---|---|---|
-| pipx | `pipx install "https://github.com/KynSec/CommitGuard/releases/download/v3.4.1/commit_guard-3.4.1-py3-none-any.whl"` | Isolated CLI install from the signed release |
-| PyPI | `pipx install commit-guard` | After trusted publishing is enabled |
-| pip | `python -m pip install "https://github.com/KynSec/CommitGuard/releases/download/v3.4.1/commit_guard-3.4.1-py3-none-any.whl"` | Existing virtual environments |
-| Source | `git clone https://github.com/KynSec/CommitGuard.git` | Development and review |
-| VS Code | [Install release VSIX](https://github.com/KynSec/CommitGuard/releases/download/v3.4.1/commitguard-kynsec-1.0.1.vsix) (`code --install-extension commitguard-kynsec-1.0.1.vsix`) | Live diagnostics and the 1.0.1 scan panel |
+| pipx | `pipx install commitguard-kynsec` | Isolated CLI install from PyPI |
+| PyPI | `python -m pip install commitguard-kynsec` | Existing virtual environments |
+| Release wheel | `pipx install "https://github.com/KynSec/commitguard-kynsec/releases/download/v3.4.2/commitguard_kynsec-3.4.2-py3-none-any.whl"` | Signed wheel from GitHub Releases |
+| Source | `git clone https://github.com/KynSec/commitguard-kynsec.git` | Development and review |
+| VS Code | [Install release VSIX](https://github.com/KynSec/commitguard-kynsec/releases/download/v3.4.2/commitguard-kynsec-1.0.1.vsix) (`code --install-extension commitguard-kynsec-1.0.1.vsix`) | Live diagnostics and the 1.0.1 scan panel |
 | pre-commit | `commit-guard install . --no-hook` | Framework-managed hooks |
-| GitHub Action | `uses: KynSec/CommitGuard@v3.4.1` | CI enforcement |
-| Docker | `docker pull ghcr.io/kynsec/commitguard:v3.4.1` | Isolated or CI runs |
+| GitHub Action | `uses: KynSec/commitguard-kynsec@v3.4.2` | CI enforcement |
+| Docker | `docker pull ghcr.io/kynsec/commitguard-kynsec:v3.4.2` | Isolated or CI runs |
 | Homebrew | Formula in `packaging/homebrew/commitguard.rb` | macOS/Linux package management |
 | Scoop | Manifest in `packaging/scoop/commitguard.json` | Windows package management |
 
@@ -127,7 +130,7 @@ submission is tracked as part of Phase 5.
 ### VS Code extension
 
 Install the signed `commitguard-kynsec-1.0.1.vsix` from the
-[3.4.1 release](https://github.com/KynSec/CommitGuard/releases/download/v3.4.1/commitguard-kynsec-1.0.1.vsix),
+[3.4.2 release](https://github.com/KynSec/commitguard-kynsec/releases/download/v3.4.2/commitguard-kynsec-1.0.1.vsix),
 or build it from `editors/vscode/`. Marketplace publication is pending.
 
 The extension starts the local language server for live diagnostics and adds an
@@ -337,7 +340,7 @@ guide, reports, maintenance, and a validated config editor.
 
 ![CommitGuard local control center](docs/assets/control-center.png)
 
-*The loopback control center (shown in v3.1.0; v3.4.1 keeps the same layout).*
+*The loopback control center (shown in v3.1.0; v3.4.2 keeps the same layout).*
 
 Security defaults: binds to `127.0.0.1`, requires a per-run token, validates the
 `Host` header, caps request bodies, keeps secrets redacted, and runs pipelines
@@ -383,7 +386,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - uses: KynSec/CommitGuard@v3.4.1
+      - uses: KynSec/commitguard-kynsec@v3.4.2
         with:
           format: sarif
           scan-mode: all
@@ -473,7 +476,7 @@ Apache-2.0. See [LICENSE](LICENSE), [NOTICE](NOTICE), and
 | **GitHub Profile** | [@Amr-Khaled-Ahmed](https://github.com/Amr-Khaled-Ahmed) |
 | **Email** | [amr171516@gmail.com](mailto:amr171516@gmail.com) |
 | **Official Organization** | [CommitGuard Security (@KynSec)](https://github.com/KynSec) |
-| **Official Repository** | [github.com/KynSec/CommitGuard](https://github.com/KynSec/CommitGuard) |
+| **Official Repository** | [github.com/KynSec/commitguard-kynsec](https://github.com/KynSec/commitguard-kynsec) |
 
 For security reports, follow [SECURITY.md](SECURITY.md). For bugs and feature
-requests, use the [official issue tracker](https://github.com/KynSec/CommitGuard/issues).
+requests, use the [official issue tracker](https://github.com/KynSec/commitguard-kynsec/issues).
