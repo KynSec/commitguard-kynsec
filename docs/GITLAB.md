@@ -26,7 +26,7 @@ commitguard:
   stage: test
   image: python:3.12-slim
   before_script:
-    - pip install commit-guard
+    - pip install commitguard-kynsec
   script:
     - commit-guard scan --diff "$CI_MERGE_REQUEST_DIFF_BASE_SHA...$CI_COMMIT_SHA"
         --format gitlab --report-path gl-code-quality-report.json

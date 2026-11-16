@@ -5,11 +5,11 @@ editing this file. The lead maintainer is also listed in the README.
 
 | Role | Holder | Team |
 |---|---|---|
-| Lead maintainer | Amr Khaled Ahmed ([@AmrEldhshan](https://github.com/AmrEldhshan)) | `@CommitGuard-Sec/lead-maintainers` |
-| Maintainer council | Project maintainers | `@CommitGuard-Sec/maintainers` |
-| Release managers | Rotating pair | `@CommitGuard-Sec/release-managers` |
-| Security response team | At least two maintainers | `@CommitGuard-Sec/security-response` |
-| Rule-pack maintainers | Per-pack owners | `@CommitGuard-Sec/rule-packs` |
+| Lead maintainer | Amr Khaled Ahmed ([@AmrEldhshan](https://github.com/AmrEldhshan)) | `@KynSec/lead-maintainers` |
+| Maintainer council | Project maintainers | `@KynSec/maintainers` |
+| Release managers | Rotating pair | `@KynSec/release-managers` |
+| Security response team | At least two maintainers | `@KynSec/security-response` |
+| Rule-pack maintainers | Per-pack owners | `@KynSec/rule-packs` |
 
 ## Responsibilities
 

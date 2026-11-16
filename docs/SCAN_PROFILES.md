@@ -190,7 +190,7 @@ The **Profiles** tab shows this guide inside the GUI, including the active profi
 The profile file ships inside the installed rules package, and this guide ships in the `commit_guard_docs` package. Both are available after:
 
 ```bash
-pip install commit-guard
+pip install commitguard-kynsec
 commit-guard --list-profiles
 ```
 

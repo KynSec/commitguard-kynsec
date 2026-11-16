@@ -21,8 +21,8 @@ root. If it reports that no launcher was found:
 
 1. Open a folder and confirm the workspace is trusted. The extension does not
    run in restricted mode.
-2. Install the CLI (`pipx install commit-guard` or
-   `python -m pip install commit-guard`) or keep a working `commit-guard`
+2. Install the CLI (`pipx install commitguard-kynsec` or
+   `python -m pip install commitguard-kynsec`) or keep a working `commit-guard`
    wrapper in the repository.
 3. Set `commitguard.pythonPath` to the interpreter that has CommitGuard
    installed, or set `commitguard.executable` to the absolute launcher path.

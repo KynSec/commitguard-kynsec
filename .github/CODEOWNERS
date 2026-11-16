@@ -1,21 +1,21 @@
 # Default reviewers
-* @CommitGuard-Sec/maintainers
+* @KynSec/maintainers
 
 # Governance and release process
-/GOVERNANCE.md @CommitGuard-Sec/lead-maintainers @CommitGuard-Sec/maintainers
-/MAINTAINERS.md @CommitGuard-Sec/lead-maintainers @CommitGuard-Sec/maintainers
-/SECURITY.md @CommitGuard-Sec/security-response
-/docs/SECURITY-RESPONSE.md @CommitGuard-Sec/security-response
-/docs/RELEASING.md @CommitGuard-Sec/release-managers
-/.github/workflows/ @CommitGuard-Sec/release-managers @CommitGuard-Sec/security-response
+/GOVERNANCE.md @KynSec/lead-maintainers @KynSec/maintainers
+/MAINTAINERS.md @KynSec/lead-maintainers @KynSec/maintainers
+/SECURITY.md @KynSec/security-response
+/docs/SECURITY-RESPONSE.md @KynSec/security-response
+/docs/RELEASING.md @KynSec/release-managers
+/.github/workflows/ @KynSec/release-managers @KynSec/security-response
 
 # Detection and rule data
-/core/ast_taint.py @CommitGuard-Sec/maintainers
-/core/interprocedural.py @CommitGuard-Sec/maintainers
-/rules/ @CommitGuard-Sec/rule-packs
-/benchmarks/ @CommitGuard-Sec/maintainers
+/core/ast_taint.py @KynSec/maintainers
+/core/interprocedural.py @KynSec/maintainers
+/rules/ @KynSec/rule-packs
+/benchmarks/ @KynSec/maintainers
 
 # Rule-pack registry and signing
-/core/rule_packs.py @CommitGuard-Sec/security-response @CommitGuard-Sec/maintainers
-/core/sca.py @CommitGuard-Sec/security-response
-/core/vex.py @CommitGuard-Sec/security-response
+/core/rule_packs.py @KynSec/security-response @KynSec/maintainers
+/core/sca.py @KynSec/security-response
+/core/vex.py @KynSec/security-response

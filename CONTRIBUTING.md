@@ -4,15 +4,15 @@ Thanks for helping make CommitGuard better. The project has a deliberately
 small dependency footprint and a strong preference for predictable, testable
 behavior.
 
-Official repository: <https://github.com/CommitGuard-Sec/CommitGuard>
+Official repository: <https://github.com/KynSec/commitguard-kynsec>
 
 ---
 
 ## Development setup
 
 ```bash
-git clone https://github.com/CommitGuard-Sec/CommitGuard.git
-cd CommitGuard
+git clone https://github.com/KynSec/commitguard-kynsec.git
+cd commitguard-kynsec
 python -m pip install pyyaml
 python -m unittest discover -s tests -v
 ```

@@ -465,7 +465,7 @@ export function resolveCliLaunch(args: string[]): CliLaunch {
 
   throw new Error(
     "Could not locate the CommitGuard command. Install it with " +
-      "`python -m pip install commit-guard`, add the launcher to PATH, or set " +
+      "`python -m pip install commitguard-kynsec`, add the launcher to PATH, or set " +
       "`commitguard.executable` to its absolute path. Checked: " +
       checked.join(", "),
   );

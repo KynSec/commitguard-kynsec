@@ -4,10 +4,10 @@
 > Catch secrets, vulnerabilities, and code issues before they ever leave your machine.
 
 [![Version](https://img.shields.io/visual-studio-marketplace/v/AmrKhaledEldhshan.commitguard-kynsec?label=VS%20Code%20Marketplace&color=blue)](https://marketplace.visualstudio.com/items?itemName=AmrKhaledEldhshan.commitguard-kynsec)
-[![Offline](https://img.shields.io/badge/offline-100%25-brightgreen)](https://github.com/KynSec/CommitGuard)
-[![Zero Telemetry](https://img.shields.io/badge/telemetry-zero-blue)](https://github.com/KynSec/CommitGuard)
+[![Offline](https://img.shields.io/badge/offline-100%25-brightgreen)](https://github.com/KynSec/commitguard-kynsec)
+[![Zero Telemetry](https://img.shields.io/badge/telemetry-zero-blue)](https://github.com/KynSec/commitguard-kynsec)
 [![License](https://img.shields.io/badge/license-Apache--2.0-lightgrey)](LICENSE)
-[![GitHub](https://img.shields.io/badge/source-GitHub-black?logo=github)](https://github.com/KynSec/CommitGuard)
+[![GitHub](https://img.shields.io/badge/source-GitHub-black?logo=github)](https://github.com/KynSec/commitguard-kynsec)
 
 ---
 
@@ -39,13 +39,13 @@
 
 Or search **CommitGuard** in the Extensions Marketplace sidebar.
 
-> **Requires** the [CommitGuard CLI](https://github.com/KynSec/CommitGuard) to be installed (`pip install commit-guard`).
+> **Requires** the [CommitGuard CLI](https://github.com/KynSec/commitguard-kynsec) to be installed (`pip install commitguard-kynsec`).
 
 ---
 
 ## 🚀 Quick Start
 
-1. **Install the CLI**: `pip install commit-guard`
+1. **Install the CLI**: `pip install commitguard-kynsec`
 2. **Open a workspace** folder in VS Code
 3. **Click the shield icon** in the Activity Bar to open the CommitGuard panel
 4. **Select rule databases** (or click *All*)
@@ -139,10 +139,10 @@ The extension could not find the `commit-guard` CLI. Fix with one of:
 
 ```bash
 # Option A — pip install
-pip install commit-guard
+pip install commitguard-kynsec
 
 # Option B — pipx (recommended)
-pipx install commit-guard
+pipx install commitguard-kynsec
 
 # Option C — set explicit path in settings
 # commitguard.executable: "/home/user/.local/bin/commit-guard"
@@ -172,7 +172,7 @@ You need to stage files first: `git add <file>` or `git add -A`. Staged-only mod
 
 ```bash
 # Clone the repo
-git clone https://github.com/KynSec/CommitGuard.git
+git clone https://github.com/KynSec/commitguard-kynsec.git
 cd CommitGuard/editors/vscode
 
 # Install dependencies
@@ -197,12 +197,12 @@ Open the `editors/vscode` folder in VS Code and press `F5` to launch the Extensi
 
 ## 📄 License
 
-[Apache-2.0](https://github.com/KynSec/CommitGuard/blob/main/LICENSE) © KynSec / Amr Khaled Eldhshan
+[Apache-2.0](https://github.com/KynSec/commitguard-kynsec/blob/main/LICENSE) © KynSec / Amr Khaled Eldhshan
 
 ---
 
 <p align="center">
   Made with ❤️ by <a href="https://github.com/KynSec">KynSec</a> ·
-  <a href="https://github.com/KynSec/CommitGuard/issues">Report a bug</a> ·
-  <a href="https://github.com/KynSec/CommitGuard">GitHub</a>
+  <a href="https://github.com/KynSec/commitguard-kynsec/issues">Report a bug</a> ·
+  <a href="https://github.com/KynSec/commitguard-kynsec">GitHub</a>
 </p>

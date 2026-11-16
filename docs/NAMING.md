@@ -48,14 +48,14 @@ public launch that relies on the name.
 |---|---|
 | Product | CommitGuard |
 | CLI | `commit-guard`; `cg` shorthand is planned |
-| PyPI | `commit-guard`; `commit-guard-sast` only if the primary is unavailable |
+| PyPI | `commitguard-kynsec` |
 | Configuration | `.commit_guard.toml` |
 | Local state | `.commit_guard/` |
 | Baseline | `.commit_guard_baseline` |
 | Explicit ignore list | `.commit_guard_ignore` |
 | Environment variables | `COMMIT_GUARD_*` |
 | Inline suppression | `commit-guard-ignore` |
-| GitHub Action | `CommitGuard-Sec/CommitGuard@v1` (target) |
+| GitHub Action | `KynSec/commitguard-kynsec@v1` (target) |
 | Report paths | `commit_guard_report.*` or an explicitly configured path |
 
 Do not add rename detection, dual-read configuration, or legacy-name aliases.

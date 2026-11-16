@@ -124,7 +124,7 @@ automatically). Linux, macOS, Windows, Git worktrees, and custom
 `core.hooksPath` are supported.
 
 The GHCR package may require `docker login ghcr.io` until its visibility is set
-to public. In-repo Homebrew and Scoop manifests are updated for 3.4.1; upstream
+to public. In-repo Homebrew and Scoop manifests are updated for 3.4.2; upstream
 submission is tracked as part of Phase 5.
 
 ### VS Code extension

@@ -8,8 +8,8 @@ does not match `core.__version__`.
 
 | Artifact | Purpose |
 |---|---|
-| `commit_guard-<version>-py3-none-any.whl` | pip / pipx install. |
-| `commit_guard-<version>.tar.gz` | Source distribution. |
+| `commitguard_kynsec-<version>-py3-none-any.whl` | pip / pipx install. |
+| `commitguard_kynsec-<version>.tar.gz` | Source distribution. |
 | `commit-guard.pyz` | Single-file Python zipapp with bundled native rules. |
 | `commit-guard.cdx.json` | CycloneDX SBOM for CommitGuard. |
 | `commit-guard.spdx.json` | SPDX SBOM for CommitGuard. |
@@ -17,7 +17,7 @@ does not match `core.__version__`.
 | `SHA256SUMS.sig` | Detached OpenSSL signature for `SHA256SUMS`. |
 | `SHA256SUMS.pub` | Public key used to verify `SHA256SUMS.sig`. |
 | `commitguard-kynsec-<version>.vsix` | VS Code extension package for the Marketplace or `code --install-extension`. |
-| `ghcr.io/kynsec/commitguard:<tag>` | Container image. |
+| `ghcr.io/kynsec/commitguard-kynsec:<tag>` | Container image. |
 
 Build provenance is attested with `actions/attest-build-provenance`. Semgrep
 rule packs are excluded from wheels, sdists, zipapps, and the container image
@@ -101,8 +101,8 @@ Homebrew and Scoop manifests live under `packaging/` and are updated only after
 the signed release artifacts exist:
 
 ```bash
-python scripts/validate_packaging.py --version 3.4.1 \
-  --artifact dist/commit_guard-3.4.1.tar.gz
+python scripts/validate_packaging.py --version 3.4.2 \
+  --artifact dist/commitguard_kynsec-3.4.2.tar.gz
 ```
 
 Update the formula and manifest URL, version, and SHA-256, then submit them to
@@ -110,8 +110,8 @@ the respective upstream repositories. The release workflow publishes the
 container image with both the release tag and `latest`:
 
 ```bash
-docker pull ghcr.io/kynsec/commitguard:v3.4.1
-docker run --rm -v "$PWD:/workspace" ghcr.io/kynsec/commitguard:v3.4.1 \
+docker pull ghcr.io/kynsec/commitguard-kynsec:v3.4.2
+docker run --rm -v "$PWD:/workspace" ghcr.io/kynsec/commitguard-kynsec:v3.4.2 \
   scan --staged
 ```
 
